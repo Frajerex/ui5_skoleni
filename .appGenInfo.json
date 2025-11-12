@@ -1,0 +1,24 @@
+{
+  "generationParameters": {
+    "generationDate": "Wed Nov 12 2025 08:32:17 GMT+0100 (středoevropský standardní čas)",
+    "generatorPlatform": "Visual Studio Code",
+    "serviceType": "None",
+    "metadataFilename": "",
+    "serviceUrl": "N/A",
+    "appName": "zdb.letiste.skoleni",
+    "appTitle": "Školení pro letiště",
+    "appDescription": "",
+    "appNamespace": "",
+    "ui5Theme": "sap_fiori_3",
+    "ui5Version": "1.71.64",
+    "enableCodeAssist": false,
+    "enableEslint": false,
+    "enableTypeScript": false,
+    "showMockDataInfo": false,
+    "generatorVersion": "1.19.5",
+    "template": "Basic",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [],
+    "launchText": "To launch the generated application, run the following from the generated application root folder:\n\n```\n    npm start\n```"
+  }
+}
