@@ -14,9 +14,21 @@
       "id": "@sap/generator-fiori:basic",
       "version": "1.19.5",
       "toolsId": "ad413686-99f7-4432-a8d7-40e04622fe9a"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/sap/opu/odata/sap/ZJF_SFLIGHT_TEST_SRV/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/mainService/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      }
     }
   },
   "sap.ui": {
+    "fullWidth": true,
     "technology": "UI5",
     "icons": {
       "icon": "",
@@ -33,7 +45,7 @@
     }
   },
   "sap.ui5": {
-    "flexEnabled": true,
+    "flexEnabled": false,
     "dependencies": {
       "minUI5Version": "1.71.64",
       "libs": {
@@ -51,6 +63,11 @@
         "settings": {
           "bundleName": "zdb.letiste.skoleni.i18n.i18n"
         }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {}
       }
     },
     "resources": {
@@ -77,6 +94,13 @@
           "target": [
             "TargetMain"
           ]
+        },
+        {
+          "name": "RouteDetail",
+          "pattern": "detail/{guid}",
+          "target": [
+            "TargetDetail"
+          ] 
         }
       ],
       "targets": {
@@ -86,6 +110,13 @@
           "clearControlAggregation": false,
           "viewId": "Main",
           "viewName": "Main"
+        },
+        "TargetDetail": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Detail",
+          "viewName": "Detail"
         }
       }
     },

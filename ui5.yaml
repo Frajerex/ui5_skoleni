@@ -15,6 +15,10 @@ server:
             - /resources
             - /test-resources
           url: https://ui5.sap.com
+        backend:
+          - url: https://milhouse.mibcon.cz:8443/
+            client: '100'
+            path: /sap
     - name: fiori-tools-appreload
       afterMiddleware: compression
       configuration:

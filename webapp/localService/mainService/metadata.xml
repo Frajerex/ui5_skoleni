@@ -1,0 +1,614 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZZADANKY_SRV" xml:lang="cs" sap:schema-version="1">
+            <EntityType Name="ZgisZadankaOD" sap:label="GIS - schvalování místností" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ZzZadankaGuid" />
+                </Key>
+                <Property Name="ZzZadankaFiidMstXmetxt"
+                          Type="Edm.String"
+                          MaxLength="60"
+                          sap:unicode="false"
+                          sap:label="Ozn.náj.objektu"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="ZzZadankaOjZtxt"
+                          Type="Edm.String"
+                          MaxLength="12"
+                          sap:unicode="false"
+                          sap:label="Zkratka objektu"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="ZzZadankaGuid"
+                          Type="Edm.String"
+                          Nullable="false"
+                          MaxLength="32"
+                          sap:unicode="false"
+                          sap:label="GUID žádanky"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="ZzZadankaId"
+                          Type="Edm.String"
+                          MaxLength="10"
+                          sap:unicode="false"
+                          sap:label="Číslo žádanky GIS"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false" />
+                <Property Name="ZzZadankaZadatelOc"
+                          Type="Edm.String"
+                          MaxLength="8"
+                          sap:unicode="false"
+                          sap:label="Osobní číslo žadatele"
+                          sap:creatable="false"
+                          sap:updatable="false" />
+                <Property Name="ZzZadankaTyp"
+                          Type="Edm.String"
+                          MaxLength="1"
+                          sap:unicode="false"
+                          sap:label="Typ žádanky"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="ZzZadankaDatum"
+                          Type="Edm.DateTime"
+                          Precision="7"
+                          sap:display-format="Date"
+                          sap:unicode="false"
+                          sap:label="Datum žádosti"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="ZzZadankaRozhodneDatum"
+                          Type="Edm.DateTime"
+                          Precision="7"
+                          sap:display-format="Date"
+                          sap:unicode="false"
+                          sap:label="Rozhodné datum"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="ZzZadankaOj"
+                          Type="Edm.String"
+                          MaxLength="8"
+                          sap:unicode="false"
+                          sap:label="Organizační jednotka"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="ZzZadankaNs"
+                          Type="Edm.String"
+                          MaxLength="10"
+                          sap:unicode="false"
+                          sap:label="Nákladové středisko"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="ZzZadankaFiidMst"
+                          Type="Edm.String"
+                          MaxLength="10"
+                          sap:unicode="false"
+                          sap:label="GIS Id místnosti"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="ZzZadankaFiidObjekt"
+                          Type="Edm.String"
+                          MaxLength="10"
+                          sap:unicode="false"
+                          sap:label="GIS Id budovy"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="ZzZadankaDuvod"
+                          Type="Edm.String"
+                          MaxLength="250"
+                          sap:unicode="false"
+                          sap:label="Zdůvodnění"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="ZzZadankaUpravy"
+                          Type="Edm.String"
+                          MaxLength="250"
+                          sap:unicode="false"
+                          sap:label="Popis úprav"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="ZzZadankaSchvaleno"
+                          Type="Edm.Boolean"
+                          sap:unicode="false"
+                          sap:label="Žádanka schválena"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="ZzZadankaSchvalovatel"
+                          Type="Edm.String"
+                          MaxLength="12"
+                          sap:unicode="false"
+                          sap:label="Schvalovatel žádank"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="ZzZadankaSchvDatum"
+                          Type="Edm.DateTime"
+                          Precision="7"
+                          sap:unicode="false"
+                          sap:label="Datum schválení"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="ZzZadankaZamitnuto"
+                          Type="Edm.Boolean"
+                          sap:unicode="false"
+                          sap:label="Žádanka zamítnuta"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="ZzZadankaZamitnuta"
+                          Type="Edm.String"
+                          MaxLength="12"
+                          sap:unicode="false"
+                          sap:label="Žádanku zamítnul"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="ZzZadankaZamDatum"
+                          Type="Edm.DateTime"
+                          Precision="7"
+                          sap:unicode="false"
+                          sap:label="Datum zamítnutí žáda"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="ZzZadankaWfSpusteno"
+                          Type="Edm.Boolean"
+                          sap:unicode="false"
+                          sap:label="WF spuštěno"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="ZzZadankaWfUkonceno"
+                          Type="Edm.Boolean"
+                          sap:unicode="false"
+                          sap:label="WF schv. ukončeno"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="ZzZadankaZadatelEname"
+                          Type="Edm.String"
+                          MaxLength="40"
+                          sap:unicode="false"
+                          sap:label="Žadatel jméno"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="ZzZadankaTypTxt"
+                          Type="Edm.String"
+                          MaxLength="20"
+                          sap:unicode="false"
+                          sap:label="Typ žádanky popis"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="ZzZadankaOjTxt"
+                          Type="Edm.String"
+                          MaxLength="40"
+                          sap:unicode="false"
+                          sap:label="Označen OJí"
+                          sap:creatable="false"
+                          sap:updatable="false" />
+                <Property Name="ZzZadankaNsTxt"
+                          Type="Edm.String"
+                          MaxLength="40"
+                          sap:unicode="false"
+                          sap:label="Označení NS"
+                          sap:creatable="false"
+                          sap:updatable="false" />
+                <Property Name="ZzZadankaFiidMstKbez"
+                          Type="Edm.String"
+                          MaxLength="15"
+                          sap:unicode="false"
+                          sap:label="Dr.využití místnosti"
+                          sap:creatable="false"
+                          sap:updatable="false" />
+                <Property Name="ZzZadankaFiidObjektXgetxt"
+                          Type="Edm.String"
+                          MaxLength="60"
+                          sap:unicode="false"
+                          sap:label="Ozn.budovy"
+                          sap:creatable="false"
+                          sap:updatable="false" />
+                <NavigationProperty Name="ZgisZadankaODCommentSet" Relationship="ZZADANKY_SRV.ZgisZadankaOD2ZgisZadankaODComment" FromRole="FromRole_ZgisZadankaOD2ZgisZadankaODComment" ToRole="ToRole_ZgisZadankaOD2ZgisZadankaODComment" />
+                <NavigationProperty Name="EventSet" Relationship="ZZADANKY_SRV.ZgisZadankaOD2Event" FromRole="FromRole_ZgisZadankaOD2Event" ToRole="ToRole_ZgisZadankaOD2Event" />
+            </EntityType>
+            <EntityType Name="ZgisZadankaODComment" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ZzZadankaGuid" />
+                </Key>
+                <Property Name="ZzZadankaGuid"
+                          Type="Edm.String"
+                          Nullable="false"
+                          MaxLength="32"
+                          sap:unicode="false"
+                          sap:label="GUID žádanky"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="Text"
+                          Type="Edm.String"
+                          sap:unicode="false"
+                          sap:label="Kometntář"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="EventSet" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ZzZadankaGuid" />
+                    <PropertyRef Name="EventId" />
+                </Key>
+                <Property Name="ZzButtonType"
+                          Type="Edm.String"
+                          MaxLength="10"
+                          sap:unicode="false"
+                          sap:label="Typ tlačítka"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="ZzZadankaGuid"
+                          Type="Edm.String"
+                          Nullable="false"
+                          MaxLength="32"
+                          sap:unicode="false"
+                          sap:label="GUID žádanky"
+                          sap:creatable="false"
+                          sap:updatable="false" />
+                <Property Name="EventId"
+                          Type="Edm.String"
+                          Nullable="false"
+                          MaxLength="10"
+                          sap:unicode="false"
+                          sap:label="Událost"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:filterable="false" />
+                <Property Name="ZzParamStruc"
+                          Type="Edm.String"
+                          MaxLength="30"
+                          sap:unicode="false"
+                          sap:label="Struktura parametrů"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="ButtonPosition"
+                          Type="Edm.String"
+                          MaxLength="1"
+                          sap:unicode="false"
+                          sap:label="Pozice tlačítka"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="ZzReturnEntity"
+                          Type="Edm.Boolean"
+                          Nullable="false"
+                          sap:unicode="false"
+                          sap:label="Vrácení entity"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="Alignment"
+                          Type="Edm.String"
+                          MaxLength="1"
+                          sap:unicode="false"
+                          sap:label="Zarovnání"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="Systp"
+                          Type="Edm.String"
+                          MaxLength="5"
+                          sap:unicode="false"
+                          sap:label="Systémový typ akce"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="Lfdnr"
+                          Type="Edm.String"
+                          MaxLength="3"
+                          sap:unicode="false"
+                          sap:label="Pořadové číslo"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="Uname"
+                          Type="Edm.String"
+                          Nullable="false"
+                          MaxLength="12"
+                          sap:unicode="false"
+                          sap:label="Uživatel"
+                          sap:creatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="NavToMain"
+                          Type="Edm.Boolean"
+                          sap:unicode="false"
+                          sap:label="Návrat na hlavní obr"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="Popup"
+                          Type="Edm.Boolean"
+                          sap:unicode="false"
+                          sap:label="Popup okno"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="CommentFlg"
+                          Type="Edm.Boolean"
+                          sap:unicode="false"
+                          sap:label="Zadání komentáře"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="CommentReq"
+                          Type="Edm.Boolean"
+                          sap:unicode="false"
+                          sap:label="Komentář povinný"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="EventIdTx"
+                          Type="Edm.String"
+                          MaxLength="40"
+                          sap:unicode="false"
+                          sap:label="Popis události"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="PopupTitle"
+                          Type="Edm.String"
+                          MaxLength="255"
+                          sap:unicode="false"
+                          sap:label="Nadpis popup okna"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="PopupText"
+                          Type="Edm.String"
+                          MaxLength="255"
+                          sap:unicode="false"
+                          sap:label="Text v popup okně"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="ButtonTooltip"
+                          Type="Edm.String"
+                          MaxLength="255"
+                          sap:unicode="false"
+                          sap:label="Nápověda tlačítka"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="Enabled"
+                          Type="Edm.Boolean"
+                          sap:unicode="false"
+                          sap:label="Událost aktivní"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+                <Property Name="ButtonType"
+                          Type="Edm.String"
+                          MaxLength="15"
+                          sap:unicode="false"
+                          sap:label="Button type pro UI5"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="UnameShlp" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Uname" />
+                </Key>
+                <Property Name="Uname"
+                          Type="Edm.String"
+                          Nullable="false"
+                          MaxLength="12"
+                          sap:filterable="false"
+                          sap:label="Uživatel. jméno" />
+                <Property Name="NameText"
+                          Type="Edm.String"
+                          MaxLength="80"
+                          sap:filterable="false"
+                          sap:label="Celé jméno" />
+            </EntityType>
+            <ComplexType Name="CxKey">
+                <Property Name="ZzZadankaGUID"
+                          Type="Edm.String"
+                          Nullable="false"
+                          MaxLength="32"
+                          sap:label="ID zadanky"
+                          sap:creatable="false"
+                          sap:updatable="false"
+                          sap:sortable="false"
+                          sap:filterable="false" />
+            </ComplexType>
+            <Association Name="ZgisZadankaOD2Event" sap:content-version="1">
+                <End Type="ZZADANKY_SRV.ZgisZadankaOD" Multiplicity="1" Role="FromRole_ZgisZadankaOD2Event" />
+                <End Type="ZZADANKY_SRV.Event" Multiplicity="*" Role="ToRole_ZgisZadankaOD2Event" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_ZgisZadankaOD2Event">
+                        <PropertyRef Name="ZzZadankaGuid" />
+                    </Principal>
+                    <Dependent Role="ToRole_ZgisZadankaOD2Event">
+                        <PropertyRef Name="ZzZadankaGuid" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="ZgisZadankaOD2ZgisZadankaODComment" sap:content-version="1">
+                <End Type="ZZADANKY_SRV.ZgisZadankaOD" Multiplicity="0..1" Role="FromRole_ZgisZadankaOD2ZgisZadankaODComment" />
+                <End Type="ZZADANKY_SRV.ZgisZadankaODComment" Multiplicity="*" Role="ToRole_ZgisZadankaOD2ZgisZadankaODComment" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_ZgisZadankaOD2ZgisZadankaODComment">
+                        <PropertyRef Name="ZzZadankaGuid" />
+                    </Principal>
+                    <Dependent Role="ToRole_ZgisZadankaOD2ZgisZadankaODComment">
+                        <PropertyRef Name="ZzZadankaGuid" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="ZZADANKY_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="UnameShlpSet"
+                           EntityType="ZZADANKY_SRV.UnameShlp"
+                           sap:creatable="false"
+                           sap:updatable="false"
+                           sap:deletable="false"
+                           sap:content-version="1" />
+                <EntitySet Name="ZgisZadankaODSet"
+                           EntityType="ZZADANKY_SRV.ZgisZadankaOD"
+                           sap:creatable="false"
+                           sap:updatable="false"
+                           sap:deletable="false"
+                           sap:pageable="false"
+                           sap:content-version="1" />
+                <EntitySet Name="ZgisZadankaODCommentSet"
+                           EntityType="ZZADANKY_SRV.ZgisZadankaODComment"
+                           sap:creatable="false"
+                           sap:updatable="false"
+                           sap:deletable="false"
+                           sap:pageable="false"
+                           sap:content-version="1" />
+                <EntitySet Name="EventSet"
+                           EntityType="ZZADANKY_SRV.Event"
+                           sap:creatable="false"
+                           sap:deletable="false"
+                           sap:pageable="false"
+                           sap:content-version="1" />
+                <AssociationSet Name="ZgisZadankaOD2ZgisZadankaODCommentSet"
+                                Association="ZZADANKY_SRV.ZgisZadankaOD2ZgisZadankaODComment"
+                                sap:creatable="false"
+                                sap:updatable="false"
+                                sap:deletable="false"
+                                sap:content-version="1">
+                    <End EntitySet="ZgisZadankaODSet" Role="FromRole_ZgisZadankaOD2ZgisZadankaODComment" />
+                    <End EntitySet="ZgisZadankaODCommentSet" Role="ToRole_ZgisZadankaOD2ZgisZadankaODComment" />
+                </AssociationSet>
+                <AssociationSet Name="ZgisZadankaOD2EventSet"
+                                Association="ZZADANKY_SRV.ZgisZadankaOD2Event"
+                                sap:creatable="false"
+                                sap:updatable="false"
+                                sap:deletable="false"
+                                sap:content-version="1">
+                    <End EntitySet="ZgisZadankaODSet" Role="FromRole_ZgisZadankaOD2Event" />
+                    <End EntitySet="EventSet" Role="ToRole_ZgisZadankaOD2Event" />
+                </AssociationSet>
+                <FunctionImport Name="REJECT"
+                                ReturnType="ZZADANKY_SRV.ZgisZadankaOD"
+                                EntitySet="ZgisZadankaODSet"
+                                m:HttpMethod="POST"
+                                sap:label="Zamítnout"
+                                sap:action-for="ZZADANKY_SRV.ZgisZadankaOD">
+                    <Parameter Name="ZzZadankaGuid" Type="Edm.String" Mode="In" MaxLength="32" />
+                </FunctionImport>
+                <FunctionImport Name="ACCEPT"
+                                ReturnType="ZZADANKY_SRV.ZgisZadankaOD"
+                                EntitySet="ZgisZadankaODSet"
+                                m:HttpMethod="POST"
+                                sap:label="Schválit"
+                                sap:action-for="ZZADANKY_SRV.ZgisZadankaOD">
+                    <Parameter Name="ZzZadankaGuid" Type="Edm.String" Mode="In" MaxLength="32" />
+                </FunctionImport>
+                <FunctionImport Name="CANCEL"
+                                ReturnType="ZZADANKY_SRV.ZgisZadankaOD"
+                                EntitySet="ZgisZadankaODSet"
+                                m:HttpMethod="POST"
+                                sap:label="Zpět"
+                                sap:action-for="ZZADANKY_SRV.ZgisZadankaOD">
+                    <Parameter Name="ZzZadankaGuid" Type="Edm.String" Mode="In" MaxLength="32" />
+                </FunctionImport>
+                <FunctionImport Name="Dotaz"
+                                ReturnType="ZZADANKY_SRV.ZgisZadankaOD"
+                                EntitySet="ZgisZadankaODSet"
+                                m:HttpMethod="POST"
+                                sap:action-for="ZZADANKY_SRV.ZgisZadankaOD">
+                    <Parameter Name="ZzZadankaGuid" Type="Edm.String" Mode="In" MaxLength="32" />
+                    <Parameter Name="Uname" Type="Edm.String" Mode="In" MaxLength="12" />
+                </FunctionImport>
+                <FunctionImport Name="GetKeyForWiid" ReturnType="ZZADANKY_SRV.CxKey" m:HttpMethod="GET">
+                    <Parameter Name="Wiid"
+                               Type="Edm.String"
+                               Mode="In"
+                               MaxLength="12"
+                               sap:label="Identifikace" />
+                </FunctionImport>
+            </EntityContainer>
+            <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZZADANKY_SRV.Event/Uname">
+                <Annotation Term="com.sap.vocabularies.Common.v1.ValueList">
+                    <Record Type="com.sap.vocabularies.Common.v1.ValueListType">
+                        <PropertyValue Property="Label" String="Uname" />
+                        <PropertyValue Property="CollectionPath" String="UnameShlpSet" />
+                        <PropertyValue Property="SearchSupported" Bool="true" />
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="com.sap.vocabularies.Common.v1.ValueListParameterInOut">
+                                    <PropertyValue Property="ValueListProperty" String="Uname" />
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Uname" />
+                                </Record>
+                                <Record Type="com.sap.vocabularies.Common.v1.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="NameText" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="https://gwdev.lkpr.cz:44344/sap/opu/odata/sap/ZZADANKY_SRV/$metadata" />
+            <atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="https://gwdev.lkpr.cz:44344/sap/opu/odata/sap/ZZADANKY_SRV/$metadata" />
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
