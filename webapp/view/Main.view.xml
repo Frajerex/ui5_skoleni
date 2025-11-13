@@ -1,7 +1,81 @@
-<mvc:View controllerName="zdb.letiste.skoleni.controller.Main"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-        <content />
+<mvc:View controllerName="zdb.letiste.skoleni.controller.Main" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+    <Page id="page" title="{i18n>title}" showHeader="true"> 
+        <content>
+            <!--<Button icon="sap-icon://accept" text="Prvni tlacitko" type="Emphasized" press=".handlePressButton"/>
+            <Button icon="sap-icon://accept" text="Druhe tlacitko" type="Emphasized" press=".handlePressButton"/>
+            <Table>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="Jan"/>
+                            <Text text="Novak"/>
+                        </cells>
+                    </ColumnListItem>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="Petr"/>
+                            <Text text="Svoboda"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+                <headerToolbar>
+                    <Toolbar>
+                        <Title text="Uzivatele"/>
+                    </Toolbar>
+                </headerToolbar>
+                <columns>
+                    <Column>
+                        <header>
+                            <Text text="Jmeno"/>
+                        </header>
+                    </Column>
+                    <Column>
+                        <header>
+                            <Text text="Prijmeni"/>
+                        </header>
+                    </Column>
+                </columns>
+            </Table>-->
+
+            <Table headerText="Žádanky" items="{/}">
+                <columns>
+                    <Column>
+                        <header>
+                            <Text text="{/#ZgisZadankaOD/ZzZadankaId/@sap:label}"/>
+                            <Text text="Číslo žádanky GIS"/>
+                        </header>
+                    </Column>
+                    <Column>
+                        <header>
+                            <Text text="{/#ZgisZadankaOD/ZzZadankaTyp/@sap:label}"/>
+                            <Text text="Typ žádanky"/>
+                        </header>
+                    </Column>
+                    <Column>
+                        <header>
+                            <Text text="{/#ZgisZadankaOD/ZzZadankaDatum/@sap:label}"/>
+                            <Text text="Datum žádosti"/>
+                        </header>
+                    </Column>
+                    <Column hAlign="Center">
+                        <header>
+                            <Text text="{/#ZgisZadankaOD/ZzZadankaSchvaleno/@sap:label}"/>
+                            <Text text="Žádanka schválena"/>
+                        </header>
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem type="Active" press=".handlePressItem">
+                        <cells>
+                            <!--<Text class="boldText" text="1234"/>-->
+                            <Label text="{ZzZadankaId}" design="Bold"/>
+                            <ObjectStatus text="Žádanka: {ZzZadankaTyp}" state="{ path: 'ZzZadankaTyp', formatter: '.formatter.setState' }" inverted="true"/>
+                            <Text text="{ZzZadankaDatum}"/>
+                            <CheckBox selected="{ZzZadankaSchvaleno}" displayOnly="true"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>  
     </Page>
 </mvc:View>

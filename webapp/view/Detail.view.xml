@@ -1,0 +1,34 @@
+<mvc:View controllerName="zdb.letiste.skoleni.controller.Detail" 
+	xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+    <Page showNavButton="true" navButtonPress="handleNavButtonPress" id="detailPage" title="{i18n>detailTitle}: {ZzZadankaId}" showHeader="true"> 
+        <content>
+            <f:SimpleForm
+			editable="false"
+			layout="ResponsiveGridLayout"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+				<Label text="Číslo žádanky GIS" />
+				<Text text="{ZzZadankaId}" />
+				<Label text="Typ žádanky" />
+                <ObjectStatus text="Žádanka: {ZzZadankaTyp}" state="{ path: 'ZzZadankaTyp', formatter: '.formatter.setState' }" inverted="true"/>
+				<Label text="Datum žádosti" />
+                <Text text="{ZzZadankaDatum}"/>      
+				<Label text="Žádanka schválena" />
+                <CheckBox selected="{ZzZadankaSchvaleno}" displayOnly="true"/>
+			</f:content>
+		</f:SimpleForm>
+        </content>
+    </Page>
+</mvc:View>
